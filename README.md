@@ -4,7 +4,7 @@ This API allows users to create and retrieve orders. The system restricts access
 🛠️ Endpoints
 ## POST /api/orders
 
-Creates a new order.
+    Creates a new order.
 
     Request Body (JSON):
 
@@ -26,7 +26,7 @@ Creates a new order.
 
 ## GET /api/orders
 
-Returns all orders associated with the demo user.
+    Returns all orders associated with the demo user.
 
     Success Response:
     200 OK
@@ -42,7 +42,7 @@ Returns all orders associated with the demo user.
 
 ## GET /api/orders/{id}
 
-Returns a specific order only if it belongs to the demo user.
+    Returns a specific order only if it belongs to the demo user.
 
     Path Parameter:
 
@@ -58,8 +58,8 @@ Returns a specific order only if it belongs to the demo user.
       "total": 31.0
     }
 
-Error Response:
-404 Not Found – If the order does not exist or does not belong to the user.
+    Error Response:
+    404 Not Found – If the order does not exist or does not belong to the user.
 
 -----------------------------------------------
 
@@ -69,64 +69,64 @@ This API allows users to leave ratings and short feedback on the products they'v
 
 ## POST /api/rating
 
-Submit a rating for a product that was part of an order.
-Request Body (JSON):
+    Submit a rating for a product that was part of an order.
+    Request Body (JSON):
 
-{
-  "orderId": 1,
-  "productId": 101,
-  "productName": "Sample Item",
-  "stars": 5,
-  "feedback": "Great quality!"
-}
+    {
+      "orderId": 1,
+      "productId": 101,
+      "productName": "Sample Item",
+      "stars": 5,
+      "feedback": "Great quality!"
+    }
 
-Success Response:
+    Success Response:
 
-200 OK
-Returns the created rating with an assigned internal ID.
-Error Response:
+    200 OK
+    Returns the created rating with an assigned internal ID.
+    Error Response:
 
-400 Bad Request – If stars is not between 1 and 5.
+    400 Bad Request – If stars is not between 1 and 5.
 
 ## GET /api/rating/user
 
-Retrieve all ratings submitted by the current user.
-Success Response:
+    Retrieve all ratings submitted by the current user.
+    Success Response:
 
-200 OK
+    200 OK
 
-[
-  {
-    "ratingId": 1,
-    "orderId": 1,
-    "productId": 101,
-    "productName": "Sample Item",
-    "stars": 5,
-    "feedback": "Great quality!",
-    "userId": 1
-  }
-]
+    [
+      {
+        "ratingId": 1,
+        "orderId": 1,
+        "productId": 101,
+        "productName": "Sample Item",
+        "stars": 5,
+        "feedback": "Great quality!",
+        "userId": 1
+      }
+    ]
 
 ## GET /api/rating/order/{orderId}
 
-Retrieve all ratings given for a specific order.
-  Path Parameter:
+    Retrieve all ratings given for a specific order.
+    Path Parameter:
 
-    orderId: The ID of the order to retrieve ratings for.
+      orderId: The ID of the order to retrieve ratings for.
 
-  Success Response:
+    Success Response:
 
-200 OK
-Returns an array of ratings linked to that order.
+    200 OK
+    Returns an array of ratings linked to that order.
 
 ## GET /api/rating/product/{productId}
 
-Retrieve all ratings left for a specific product across all users and orders.
-  Path Parameter:
+    Retrieve all ratings left for a specific product across all users and orders.
+    Path Parameter:
 
-    productId: The ID of the product.
+      productId: The ID of the product.
 
-  Success Response:
+    Success Response:
 
-200 OK
-Returns a list of all ratings for the product, useful for analytics or display.
+    200 OK
+    Returns a list of all ratings for the product, useful for analytics or display.
