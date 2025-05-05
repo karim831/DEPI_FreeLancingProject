@@ -51,12 +51,12 @@ Returns a specific order only if it belongs to the demo user.
     Success Response:
     200 OK
 
-{
-  "orderId": 1,
-  "userId": 1,
-  "OrderItems": [...],
-  "total": 31.0
-}
+    {
+      "orderId": 1,
+      "userId": 1,
+      "OrderItems": [...],
+      "total": 31.0
+    }
 
 Error Response:
 404 Not Found – If the order does not exist or does not belong to the user.
