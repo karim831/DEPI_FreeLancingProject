@@ -31,3 +31,4 @@
 /home/kareem/Studying/DEPI_Project/OrderTrackingSystem/obj/Debug/net8.0/OrderTrackingSystem.pdb
 /home/kareem/Studying/DEPI_Project/OrderTrackingSystem/obj/Debug/net8.0/OrderTrackingSystem.genruntimeconfig.cache
 /home/kareem/Studying/DEPI_Project/OrderTrackingSystem/obj/Debug/net8.0/ref/OrderTrackingSystem.dll
+/home/kareem/Studying/DEPI_Project/OrderTrackingSystem/obj/Debug/net8.0/OrderTrackingSystem.sourcelink.json
