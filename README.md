@@ -4,9 +4,9 @@ This API allows users to create and retrieve orders. The system restricts access
 🛠️ Endpoints
 ## POST /api/orders
 
-    Creates a new order.
+Creates a new order.
 
-    Request Body (JSON):
+Request Body (JSON):
 
     {
       "userId": 1,
@@ -20,16 +20,16 @@ This API allows users to create and retrieve orders. The system restricts access
       ]
     }
 
-    Success Response:
-    201 Created
-    Returns the created order with calculated total and generated order ID.
+Success Response:
+201 Created
+Returns the created order with calculated total and generated order ID.
 
 ## GET /api/orders
 
-    Returns all orders associated with the demo user.
+Returns all orders associated with the demo user.
 
-    Success Response:
-    200 OK
+Success Response:
+200 OK
 
     [
       {
@@ -42,14 +42,14 @@ This API allows users to create and retrieve orders. The system restricts access
 
 ## GET /api/orders/{id}
 
-    Returns a specific order only if it belongs to the demo user.
+Returns a specific order only if it belongs to the demo user.
 
-    Path Parameter:
+Path Parameter:
 
-        id: Order ID to retrieve.
+id: Order ID to retrieve.
 
-    Success Response:
-    200 OK
+Success Response:
+200 OK
 
     {
       "orderId": 1,
@@ -58,8 +58,8 @@ This API allows users to create and retrieve orders. The system restricts access
       "total": 31.0
     }
 
-    Error Response:
-    404 Not Found – If the order does not exist or does not belong to the user.
+Error Response:
+404 Not Found – If the order does not exist or does not belong to the user.
 
 -----------------------------------------------
 
@@ -69,8 +69,8 @@ This API allows users to leave ratings and short feedback on the products they'v
 
 ## POST /api/rating
 
-    Submit a rating for a product that was part of an order.
-    Request Body (JSON):
+Submit a rating for a product that was part of an order.
+Request Body (JSON):
 
     {
       "orderId": 1,
@@ -80,20 +80,20 @@ This API allows users to leave ratings and short feedback on the products they'v
       "feedback": "Great quality!"
     }
 
-    Success Response:
+Success Response:
 
-    200 OK
-    Returns the created rating with an assigned internal ID.
-    Error Response:
+200 OK
+Returns the created rating with an assigned internal ID.
+Error Response:
 
-    400 Bad Request – If stars is not between 1 and 5.
+400 Bad Request – If stars is not between 1 and 5.
 
 ## GET /api/rating/user
 
-    Retrieve all ratings submitted by the current user.
-    Success Response:
+Retrieve all ratings submitted by the current user.
+Success Response:
 
-    200 OK
+200 OK
 
     [
       {
@@ -109,24 +109,24 @@ This API allows users to leave ratings and short feedback on the products they'v
 
 ## GET /api/rating/order/{orderId}
 
-    Retrieve all ratings given for a specific order.
-    Path Parameter:
+Retrieve all ratings given for a specific order.
+Path Parameter:
 
-      orderId: The ID of the order to retrieve ratings for.
+orderId: The ID of the order to retrieve ratings for.
 
-    Success Response:
+Success Response:
 
-    200 OK
-    Returns an array of ratings linked to that order.
+200 OK
+Returns an array of ratings linked to that order.
 
 ## GET /api/rating/product/{productId}
 
-    Retrieve all ratings left for a specific product across all users and orders.
-    Path Parameter:
+Retrieve all ratings left for a specific product across all users and orders.
+Path Parameter:
 
-      productId: The ID of the product.
+productId: The ID of the product.
 
-    Success Response:
+Success Response:
 
-    200 OK
-    Returns a list of all ratings for the product, useful for analytics or display.
+200 OK
+Returns a list of all ratings for the product, useful for analytics or display.
