@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OrderTrackingSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0529ba80acf1cb35b6ce87fa9ba502c7d276fe76")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad420ab78905bbe7772ce099539c69f2702e4f8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("OrderTrackingSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OrderTrackingSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
