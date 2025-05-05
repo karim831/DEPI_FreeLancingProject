@@ -10,12 +10,12 @@ Creates a new order.
 
     {
       "userId": 1,
-      "items": [
+      "OrderItems": [
         {
-          "productId": 101,
-          "productName": "Sample Item",
-          "quantity": 2,
-          "price": 15.5
+          "ProductId": 101,
+          "ProductName": "Sample Item",
+          "Quantity": 2,
+          "Price": 15.5
         }
       ]
     }
@@ -35,7 +35,7 @@ Returns all orders associated with the demo user.
       {
         "orderId": 1,
         "userId": 1,
-        "items": [...],
+        "OrderItems": [...],
         "total": 31.0
       }
     ]
@@ -54,7 +54,7 @@ Returns a specific order only if it belongs to the demo user.
 {
   "orderId": 1,
   "userId": 1,
-  "items": [...],
+  "OrderItems": [...],
   "total": 31.0
 }
 
